@@ -21,7 +21,7 @@ const storage = multer.diskStorage({
     },
 });
 
- const upload = multer({ storage });
+const upload = multer({storage});
 
 // resized images handling
 const sharp = require('sharp');
