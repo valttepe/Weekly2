@@ -12,7 +12,16 @@ const moment = require('moment');
 
 // Multer for filehandling
 const multer = require('multer');
-const upload = multer({dest: 'uploads/'});
+// const upload = multer({dest: 'uploads/'});
+
+const storage = multer.diskStorage({
+    'destination': './uploads/',
+    'filename'(req, file, cb) {
+        cb(null, Date.now() + file.originalname);
+    },
+});
+
+ const upload = multer({ storage });
 
 // resized images handling
 const sharp = require('sharp');

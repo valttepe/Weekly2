@@ -52,7 +52,7 @@ const openModal = (item) => {
     console.log(modal);
 
     // add data to elements
-    image.src = item.image;
+    image.src = item.medium;
     title.innerText = item.title;
     detail.innerText = item.time;
 
