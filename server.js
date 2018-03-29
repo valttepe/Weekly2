@@ -30,6 +30,9 @@ mongoose.connect(url).then(() => {
   console.log('Connection to db failed: ' + err);
 });
 
+// Somehow useful
+app.use('/modules', express.static('node_modules'));
+
 // Creates schema
 const Schema = mongoose.Schema;
 const catSchema = new Schema({

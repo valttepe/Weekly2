@@ -212,7 +212,7 @@ catForm.addEventListener( 'submit', (evt) => {
             return response.json();
         }).then( (result) => {
             console.log(result);
-            window.location.replace('events.html');
+            window.location.replace('index.html');
         }
     );
 });
